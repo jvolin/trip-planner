@@ -8,7 +8,7 @@ var Place = db.define('place', {
     type: Sequelize.string,
     allowNull: false
   },
-  city:{
+  city: {
     type: Sequelize.string,
     allowNull: false
   },
@@ -20,7 +20,7 @@ var Place = db.define('place', {
     type: Sequelize.string,
     allowNull: false
   },
-  location:{ //(lat, lon float array)
+  location: { //(lat, lon float array)
     type: Sequelize.ARRAY(Sequelize.STRING),
     defaultValue: []
   }
@@ -32,14 +32,14 @@ var Hotel = db.define('hotel', {
     allowNull: false
   },
   num_stars: {
-    type: Sequelize.string,//(float from 1-5)
+    type: Sequelize.string, //(float from 1-5)
     allowNull: false
   },
   amenities: {
     type: Sequelize.string, //(string of comma delimited items)
     allowNull: false
-  },
-})
+  }
+});
 
 var Activity = db.define('activity', {
   name: {
@@ -49,8 +49,8 @@ var Activity = db.define('activity', {
   age_range: {
     type: Sequelize.string,
     allowNull: false
-  },
-})
+  }
+});
 
 var Restaurant = db.define('restaurant', {
   name: {
@@ -64,11 +64,10 @@ var Restaurant = db.define('restaurant', {
   price: {
     type: Sequelize.string, //(integer from 1-5 for how many dollar signs)
     allowNull: false
-  },
-
-})
+  }
+});
 
 
 var Associations = db.define('associations', {
 
-})
+});
