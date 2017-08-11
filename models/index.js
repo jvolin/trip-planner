@@ -65,7 +65,6 @@ var Restaurant = db.define('restaurant', {
 });
 
 
-
   Hotel.belongsTo(Place, {
     as: 'hotel_key'
   });
