@@ -23,7 +23,7 @@ app.use(function (err, req, res, next) {
 
 const PORT = 3000;
 
-db.sync()
+db.sync({force:true})
 .then(() => {
   console.log('db synced!');
   app.listen(PORT, function () {
