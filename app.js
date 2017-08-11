@@ -21,6 +21,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 const path = require('path');
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use('/jquery', express.static(path.join(__dirname, '/node_modules/jquery/dist/jquery.min.js')));
+
+app.use(express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
+
+
+
 app.use(function (err, req, res, next) {
   res.render('error');
 });

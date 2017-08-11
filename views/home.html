@@ -10,4 +10,19 @@
   <option>{{ item.name }}</option>
 {% endfor %}
 </select>
+
+<label>Restaurant: </label>
+<select name="restaurants"> <!--Supplement an id here instead of using 'name'-->
+{% for item in templateRestaurants %}
+  <option>{{ item.name }}</option>
+{% endfor %}
+</select>
+
+<label>Activity: </label>
+<select name="activity"> <!--Supplement an id here instead of using 'name'-->
+{% for item in templateActivities %}
+  <option>{{ item.name }}</option>
+{% endfor %}
+</select>
+
 {% endblock %}
