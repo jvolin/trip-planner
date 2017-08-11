@@ -2,4 +2,12 @@
 
 {% block content %}
 <h1>Welcome to Home!</h1>
+
+
+<label>Hotel: </label>
+<select name="hotels"> <!--Supplement an id here instead of using 'name'-->
+{% for item in templateHotels %}
+  <option>{{ item.name }}</option>
+{% endfor %}
+</select>
 {% endblock %}
